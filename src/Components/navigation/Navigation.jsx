@@ -3,9 +3,10 @@ import './navigation.css'
 import sidebarlogo from '../../assets/images/sidebar-logo.svg'
 import { menuslist } from '../../routes/menulist'
 
+
 function Navigation() {
   return (
-    <div className='navigation p-[20px] flex flex-col gap-[40px] rounded-[26px] w-[300px] h-[880px] bg-[#FFF] text-[15px] font-[600]'>
+    <div className='navigation p-[20px] flex flex-col gap-[40px] rounded-[26px] w-[380px] h-[900px] bg-[#FFF] text-[18px] font-[600]'>
         <div className='kampco-logo border-[1px] p-[20px] rounded-[10px] border-[#D4D4D4]'>
           <img src={sidebarlogo} alt='sidebarlogo'/>
         </div>
@@ -14,7 +15,7 @@ function Navigation() {
                 menuslist.map(menu => { 
                     return (
                         <div className='list flex items-center gap-[15px] hover:text-[red] cursor-pointer' key={menu.id}>
-                        <img className='w-[15px] h-[17px]' src={menu.icon} alt="icon" />
+                        <img className='w-[16px] h-[18px]' src={menu.icon} alt="icon" />
                         <p>{menu.name}</p>
                       </div>
                     )
