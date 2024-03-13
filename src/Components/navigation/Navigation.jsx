@@ -2,13 +2,15 @@ import React from 'react'
 import './navigation.css'
 import sidebarlogo from '../../assets/images/sidebar-logo.svg'
 import { menuslist } from '../../routes/menulist'
+import arrow from '../../assets/images/left-arrow.svg'
 
 
 function Navigation() {
   return (
-    <div className='navigation p-[20px] flex flex-col gap-[40px] rounded-[26px] w-[380px] h-[900px] bg-[#FFF] text-[18px] font-[600]'>
-        <div className='kampco-logo border-[1px] p-[20px] rounded-[10px] border-[#D4D4D4]'>
-          <img src={sidebarlogo} alt='sidebarlogo'/>
+    <div className='navigation p-[20px] flex flex-col gap-[40px] rounded-[26px] w-[380px] h-[900px] bg-[#FFF] text-[18px] font-[600] sm:hidden'>
+        <div className='kampco-logo border-[1px] p-[20px] rounded-[10px] border-[#D4D4D4] flex justify-between'>
+            <img src={sidebarlogo} alt='sidebarlogo'/>
+            <img src={arrow} alt="arrow-icon" />
         </div>
         <div className='navigation-list flex flex-col gap-[40px]'>
             {
