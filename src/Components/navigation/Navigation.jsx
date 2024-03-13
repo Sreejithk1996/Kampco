@@ -21,47 +21,8 @@ function Navigation() {
                         <p>{menu.name}</p>
                       </div>
                     )
-                })
-
-               
+                })  
             }
-
-          {/* <div className='list'>
-            <img src={dashicon} alt="dashicon" />
-            <p>Dashboard</p>
-          </div>
-          <div className='list'>
-            <img src={serviceordericon} alt="serviceordericon" />
-            <p>Service Orders</p>
-          </div>
-          <div className='list'>
-            <img src={servicesicon} alt="servicesicon" />
-            <p>Services</p>
-          </div>
-          <div className='list'>
-            <img src={productsicon} alt="productsicon" />
-            <p>Products</p>
-          </div>
-          <div className='list'>
-             <img src={customericon} alt="customericon" />
-             <p>Customers</p>
-          </div>
-          <div className='list'>    
-            <img src={billicon} alt="billicon" />
-            <p>Bill Generation & Payment</p>
-          </div>
-          <div className='list'>
-            <img src={usericon} alt="usericon" />
-            <p>Users</p>
-          </div>
-          <div className='list'>
-            <img src={reporticon} alt="reporticon" />
-            <p>Reports</p>
-          </div>
-          <div className='list'>
-            <img src={issueicon} alt="issueicon" />
-            <p>Issue Master</p>
-          </div> */}
         </div>
       </div>
   )
