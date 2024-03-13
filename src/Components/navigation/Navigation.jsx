@@ -3,6 +3,7 @@ import './navigation.css'
 import sidebarlogo from '../../assets/images/sidebar-logo.svg'
 import { menuslist } from '../../routes/menulist'
 import arrow from '../../assets/images/left-arrow.svg'
+import { NavLink } from 'react-router-dom'
 
 
 function Navigation() {
@@ -16,10 +17,13 @@ function Navigation() {
             {
                 menuslist.map(menu => { 
                     return (
+                      <NavLink to={menu.path}>
                         <div className='list flex items-center gap-[15px] hover:text-[red] cursor-pointer' key={menu.id}>
-                        <img className='w-[16px] h-[18px]' src={menu.icon} alt="icon" />
-                        <p>{menu.name}</p>
-                      </div>
+                          <img className='w-[16px] h-[18px]' src={menu.icon} alt="icon" />
+                          <p>{menu.name}</p>
+                        </div>
+                      </NavLink>
+                      
                     )
                 })  
             }

@@ -13,7 +13,7 @@ import customericon from '../assets/images/Customer-icon.svg'
     {
         id: 1,
         name: "Dashboard",
-        path: 'dashboard',
+        path: '/',
         icon: dashicon
 
     },
@@ -21,28 +21,28 @@ import customericon from '../assets/images/Customer-icon.svg'
     {
         id: 2,
         name: "Service Orders",
-        path: 'service-orders',
+        path: '/service-orders',
         icon: serviceordericon
     },
 
     {
         id: 3,
         name: "Services",
-        path: 'services',
+        path: '/services',
         icon: servicesicon
     },
 
     {
         id: 4,
         name: "Products",
-        path: 'products',
+        path: '/products',
         icon: productsicon
     },
 
     {
         id: 5,
         name: "Customers",
-        path: 'customers',
+        path: '/customers',
         icon: customericon
     },
 
