@@ -4,8 +4,15 @@ import icon2 from '../../assets/images/2.svg'
 import icon3 from '../../assets/images/3.svg'
 import icon4 from '../../assets/images/4.svg'
 import green from '../../assets/images/Green arrow.svg'
+import { useState } from 'react'
 
 function Dashboard() {
+
+  const [state,setstate] = useState(false)
+  const hide = () =>{
+    setstate(!state);
+  }
+
   return (
     <div className='dash flex flex-col gap-[40px]'>
       <div className='overview flex w-[100%] justify-between'>
@@ -48,6 +55,12 @@ function Dashboard() {
           </div>
         </div>
       </div>
+
+      <div className='text-center'>
+        <h1 className= {state ? '' : 'hidden'}>0</h1>
+        <button className='w-[200px] h-[40px] bg-[lightblue] rounded-[20px] ' onClick={hide}>{state ? 'hide' : 'show'}</button>
+      </div>
+
     </div>
   )
 }
