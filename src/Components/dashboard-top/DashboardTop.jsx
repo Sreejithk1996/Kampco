@@ -11,7 +11,7 @@ function DashboardTop() {
             <div className='notification w-[50px] h-[50px] border-[1px] border-[#D4D4D4] flex justify-center items-center rounded-[10px] relative cursor-pointer'>
               <img src={bell} alt="bell-icon" />
               <div className='alert absolute top-[-10px] right-[-10px] bg-[red] rounded-[50%] w-[25px] h-[25px] text-[12px] text-[#FFFF] flex justify-center items-center'>
-                <p>10</p>
+                <p>15</p>
               </div>
             </div>
             <div className='login flex px-[15px] py-[5px] font-[700] border-[1px] border-[#D4D4D4] rounded-[10px] items-center gap-[10px] hover:cursor-pointer'>
