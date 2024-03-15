@@ -8,10 +8,13 @@ import { useState } from 'react'
 
 function Dashboard() {
 
-  const [state,setstate] = useState(false)
-  const hide = () =>{
-    setstate(!state);
+  const [state,setstate] = useState('')
+  const [state2,setstate2] = useState([])
+
+  const add = () => {
+    setstate2 (state)
   }
+ 
 
   return (
     <div className='dash flex flex-col gap-[40px]'>
@@ -57,8 +60,9 @@ function Dashboard() {
       </div>
 
       <div className='text-center'>
-        <h1 className= {state ? '' : 'hidden'}>0</h1>
-        <button className='w-[200px] h-[40px] bg-[lightblue] rounded-[20px] ' onClick={hide}>{state ? 'hide' : 'show'}</button>
+        <input className='border-[2px]' type="text" value={state} onChange={(event) => setstate(event.target.value)}/>
+        <button onClick={add}>add</button>
+        {state2}
       </div>
 
     </div>

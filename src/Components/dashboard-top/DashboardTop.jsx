@@ -19,7 +19,7 @@ function DashboardTop() {
               <p>Super Admin</p>
               <img src={black} alt="" />
             </div>
-          </div>
+          </div>  
         </div>
   )
 }
