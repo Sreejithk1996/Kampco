@@ -8,17 +8,13 @@ import { useState } from 'react'
 
 function Dashboard() {
 
-  const [count,setcount] = useState(0)
-
-  const zero = () => {
-    setcount ((count) => count = 0)
-  }
+  const [post,setpost] = useState([])
 
   useEffect(() => {
-    setTimeout(() => {
-      setcount((count) => count + 1);
-    },1000);
-  })
+      fetch('https://jsonplaceholder.typicode.com/posts')
+      .then(response => response.json())
+      .then(posts => setpost(posts.splice(0,10)))
+  }, [])
 
 
   return (
@@ -63,10 +59,15 @@ function Dashboard() {
           </div>
         </div>
       </div>
-
-      <h1>I have rendered {count} times</h1>
-      <button className='bg-[lightgreen]' onClick={zero}>click here to start the timer again</button>
-
+    
+      {post.map((post) => 
+        <div>
+        <h1 className='text-[20px] font-[700]'>{post.title}</h1>
+        <p>{post.body}</p>
+        </div>
+      )}
+     
+      
     </div>
   )
 }
