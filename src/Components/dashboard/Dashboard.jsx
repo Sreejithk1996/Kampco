@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import icon1 from '../../assets/images/1.svg'
 import icon2 from '../../assets/images/2.svg'
 import icon3 from '../../assets/images/3.svg'
@@ -8,13 +8,18 @@ import { useState } from 'react'
 
 function Dashboard() {
 
-  const [state,setstate] = useState('')
-  const [state2,setstate2] = useState([])
+  const [count,setcount] = useState(0)
 
-  const add = () => {
-    setstate2 (state)
+  const zero = () => {
+    setcount ((count) => count = 0)
   }
- 
+
+  useEffect(() => {
+    setTimeout(() => {
+      setcount((count) => count + 1);
+    },1000);
+  })
+
 
   return (
     <div className='dash flex flex-col gap-[40px]'>
@@ -59,11 +64,8 @@ function Dashboard() {
         </div>
       </div>
 
-      <div className='text-center'>
-        <input className='border-[2px]' type="text" value={state} onChange={(event) => setstate(event.target.value)}/>
-        <button onClick={add}>add</button>
-        {state2}
-      </div>
+      <h1>I have rendered {count} times</h1>
+      <button className='bg-[lightgreen]' onClick={zero}>click here to start the timer again</button>
 
     </div>
   )
